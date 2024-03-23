@@ -7,7 +7,8 @@ on:
             - '*'
 jobs:
     full-test:
-        container: cuaesd/aesd-autotest:assignment4-buildroot
+        # container: cuaesd/aesd-autotest:assignment4-buildroot
+        container: cuaesd/aesd-autotest:assignment5-buildroot
         runs-on: ubuntu-latest
         timeout-minutes: 120
         steps:
