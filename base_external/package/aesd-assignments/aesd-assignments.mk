@@ -5,13 +5,14 @@
 #
 ##############################################################
 
-# Use locally vendored copy of the aesd-assignments tree.  The source is kept
-# inside this external buildroot tree under package/aesd-assignments/src so we
-# can carry the assignment 9 driver/socket changes alongside the buildroot
-# configuration in this repository.
-AESD_ASSIGNMENTS_VERSION = local
-AESD_ASSIGNMENTS_SITE = $(BR2_EXTERNAL_project_base_PATH)/package/aesd-assignments/src
-AESD_ASSIGNMENTS_SITE_METHOD = local
+#TODO: Fill up the contents below in order to reference your assignment 3 git contents
+AESD_ASSIGNMENTS_VERSION = 4f4cda925e8636f68ed81d2743ec1d20c0ba7f7d
+# Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
+# with ssh keys and the automated build/test system.
+# Your site should start with git@github.com:
+AESD_ASSIGNMENTS_SITE = git@github.com:Novota15/aesd-assignments.git
+AESD_ASSIGNMENTS_SITE_METHOD = git
+AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
 
 define AESD_ASSIGNMENTS_BUILD_CMDS
 	$(INSTALL) -d 0755 $(@D)/conf/ $(TARGET_DIR)/root/conf/
