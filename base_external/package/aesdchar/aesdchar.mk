@@ -1,17 +1,16 @@
+
 ##############################################################
 #
 # AESD_CHAR
 #
 ##############################################################
 
-#TODO: Fill up the contents below in order to reference your assignment 8 git contents
-AESD_CHAR_VERSION = a392d42b73371bc32d45c3bd27b7beb3ace82f72
-# Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
-# with ssh keys and the automated build/test system.
-# Your site should start with git@github.com:
-AESD_CHAR_SITE = git@github.com:Novota15/aesd-assignments.git
-AESD_CHAR_SITE_METHOD = git
-AESD_CHAR_GIT_SUBMODULES = YES
+# Use locally vendored copy of the aesd-assignments tree (shared with the
+# aesd-assignments package).  This carries the assignment 9 llseek/ioctl
+# additions to the kernel module and the aesdsocket userspace counterpart.
+AESD_CHAR_VERSION = local
+AESD_CHAR_SITE = $(BR2_EXTERNAL_project_base_PATH)/package/aesd-assignments/src
+AESD_CHAR_SITE_METHOD = local
 
 AESD_CHAR_MODULE_SUBDIRS = aesd-char-driver
 
